@@ -1,0 +1,210 @@
+#header_bar {
+	width: 100%;
+	height: 15%;
+	background-color: rgba(255, 255, 255, 0);
+	position: fixed;
+	top: 0;
+	z-index: 50;
+	transition: 0.5s all;
+	/*	box-shadow: 10px 10px 18px rgba(0,0,0,0.1); */
+}
+
+#LHS_logo {
+	width: 50%;
+	position: absolute;
+	left: 8.3333333%;
+	float: left;
+	height: 100%;
+}
+
+#upper_left_logo {
+	position: absolute;
+	width: 65px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: 0.5s all;
+}
+
+#phone_nav_logo {
+	width: 20%;
+	display: none;
+}
+
+.main_nav_bar {
+	width: 50%;
+	position: absolute;
+	right: 8.333333%;
+	top: 50%;
+	display: none;
+}
+
+.main_nav_style {
+	width: 50%;
+	height: 15%;
+	position: fixed;
+	right: 16.6666%;
+	top: 0;
+	z-index: 100;
+	transition: 0.5s all;
+}
+
+.main_nav_bar ul {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	list-style-type: none;
+	float: right;
+	margin: 0;
+	width: 100%;
+}
+
+.main_nav_bar ul li {
+	float: left;
+	width: 25%;
+	text-align: center;
+	position: relative;
+}
+
+.main_nav_bar ul li a {
+	color: rgba(101, 101, 101, 1);
+	text-decoration: none;
+	transition: color 1s;
+	position: relative;
+	width: auto !important;
+	padding: 15px;
+}
+
+.main_nav_bar ul li a:after {
+	position: absolute !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	margin: auto !important;
+	width: 0%;
+	content: ".";
+	color: transparent !important;
+	background: black;
+	height: 1px;
+}
+
+.nav_text {
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+nav.main_nav_bar ul li a:hover:after {
+	width: 100%;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+	transition: all 0.5s;
+}
+
+nav ul li a:hover {
+	color: black;
+}
+
+.white {
+	color: white !important;
+}
+
+.big_yellow {
+	font-size: 5em;
+	color: gold;
+	border-bottom: gold solid thick;
+	margin-right: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 1px;
+	background-color: black;
+	margin: 10px 0;
+	transition: 0.5s;
+}
+
+.white_bar {
+	background-color: white !important;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+	opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.phoneNavMenu {
+	width: calc(100% - 16.6666% - 35px) !important;
+	height: 100% !important;
+	/*	position: fixed!important;*/
+	right: 16.6666% !important;
+	left: 0 !important;
+	top: 0 !important;
+	display: block;
+	/*	z-index: 100!important;*/
+	background-color: black !important;
+	opacity: 0.95 !important;
+	color: white !important;
+}
+
+.phoneNavMenuClicked {
+	display: block !important;
+}
+
+.burger_icon {
+	position: absolute;
+	right: 8.3333%;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.cls-1 {
+	stroke: lightgrey;
+	fill: none;
+	stroke-miterlimit: 10;
+	stroke-width: 40px;
+	-webkit-transition: stroke 1s ease-in-out;
+	transition: stroke 1s ease-in-out;
+}
+
+.cls-2 {
+	stroke: black;
+	fill: none;
+	stroke-miterlimit: 10;
+	stroke-width: 40px;
+	-webkit-transition: stroke 1s ease-in-out;
+	transition: stroke 1s ease-in-out;
+}
+
+.cls-2_white {
+	stroke: white !important;
+}
+
+.cls-1_dimgrey {
+	stroke: dimgrey !important;
+}
+
+.active_page a {
+	color: black !important;
+	/*	font-size: 1.2em!important*/
+}
+
+.main_nav_bar ul .active_page a::after {
+	height: 0px !important;
+}

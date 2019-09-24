@@ -1,0 +1,128 @@
+.section {
+	position: relative;
+}
+
+#header_bar {
+	background-color: rgba(250, 250, 250, 1) !important;
+}
+
+.about_container {
+	height: 100%;
+	width: 100%;
+}
+
+.info_container {
+	width: 83.3333%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	height: 100%;
+}
+
+.about_info_2 {
+	position: absolute;
+	width: 50%;
+	top: 35%;
+	bottom: 0;
+	left: calc(8.33333% - 20px);
+	right: 8.33333%;
+	float: left;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 100;
+	background-color: white;
+	box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.1);
+	transition: all 0.5s;
+}
+
+.about_info_2:hover {
+	top: 33% !important;
+	box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.about_info_2:hover + .image_container {
+	margin-top: 2% !important;
+}
+
+.about_info_text {
+	margin-top: 0% !important;
+	width: 41.6666%;
+	height: 100% !important;
+	position: absolute;
+}
+
+.image_container {
+	top: 15%;
+	width: 50%;
+	right: 8.3333%;
+	bottom: 15%;
+	position: absolute;
+	overflow: hidden;
+	z-index: 2;
+	transition: all 0.5s;
+}
+
+.description_text {
+	margin-top: 0 !important;
+	max-width: auto !important;
+}
+
+#portfolio_main_title {
+	width: 100%;
+	margin-bottom: 15%;
+	z-index: 10;
+	font-size: 1em;
+	text-align: left;
+	position: fixed;
+	top: 20%;
+	left: 15.15%;
+}
+
+.description_text_title {
+	/*	margin-top:5%; */
+	font-weight: bolder;
+	margin-bottom: 5%;
+	margin-left: 20px;
+}
+
+.slimScrollDiv {
+	position: relative !important;
+}
+
+.paragraph {
+	margin-top: 0;
+	font-size: 1.1em;
+	color: black !important;
+	padding: 75px;
+}
+
+.page_number {
+	position: absolute;
+	right: 8.3333%;
+	bottom: 10%;
+}
+
+.upper_text_fade {
+	position: absolute;
+	height: 5em;
+	width: 100%;
+	z-index: 100;
+	right: 10px;
+	background: -webkit-linear-gradient(
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+
+.bottom_text_fade {
+	position: absolute;
+	height: 10em;
+	width: 100%;
+	z-index: 100;
+	bottom: 0;
+	right: 10px;
+	background: -webkit-linear-gradient(
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}

@@ -1,0 +1,75 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Home | Jamie Pask
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('css/common.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/galleryPage/gallery.css') }}" rel="stylesheet"/>
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="gallery-container">
+        <div class="portfolio_title_bar">
+            <div id="portfolio_main_title">
+                <div>Portfolio of
+                    <b style="color: gold">work.</b>
+                </div>
+
+                <div class="sub_nav_bar_2">
+                    <a class="sub_nav_link" href="../Index.html">HOME</a>&nbsp;<span class="arrow-right"></span>&nbsp;
+                    <b>PORTFOLIO</b>
+                </div>
+            </div>
+
+            <p id="portfolio_main_sub_text">
+                This collection of projects is an assortment of work created within the past two years. 
+                                Feel free to get in touch if you have any comments.
+            </p>
+        </div>
+
+        <div style="position: relative; clear:both;">
+
+            <div class="btn-toolbar filters">
+                <div data-toggle="buttons" id="filter-btn-group">
+
+                    {% for filterName in filtersArr %}
+                        <label class="btn btn-default">
+                            <input type="checkbox" value={{ filterName }} onclick="onCheckChange(this)"/>
+                            <span class="checkmark"></span>
+                            <span class="filter_text">{{ filterName }}</span>
+                        </label>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+
+            <div class="grid">
+
+                {% for project in projects %}
+
+                    {{ 
+                    include('gallery/_projectTile.html.twig', { 
+                        project: project,
+                        featureImages: featureImage
+                    }) 
+                }}
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/javascript/projectFilter.js"></script>
+{% endblock javascripts %}

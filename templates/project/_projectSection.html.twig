@@ -1,0 +1,33 @@
+<div class="section_container">
+    <div class="secton_left">
+
+        <div class="section_headings" {% if loop.index0%2 != 0 %} style="float:right" {% endif %}>
+            <h1>{{section['title']}}</h1>
+        </div>
+
+        <div class="slideshow_container" {% if loop.index0%2 == 0 %} style="float:right" {% endif %} id="container_{{index}}">
+
+            {% for slide in slides %}
+                
+                {% if slide['category'] == section['category'] %}
+                    {{ include('/project/_imageSlide.html.twig', {
+                        image: slide,
+                        count: slides|length,
+                        current: loop.index
+                    }) }}
+                {% endif %}
+            {% endfor %}
+
+            <a class="prev" onclick="prevSlide(this)">&#10094;</a>
+            <a class="next" onclick="nextSlide(this)">&#10095;</a>
+
+        </div>
+
+        <div class="text_container" {% if loop.index0%2 != 0 %} style="float:right" {% endif %}>
+
+            <h2 class="description_text">{{section['content']}}</h2>
+
+        </div>
+
+    </div>
+</div>

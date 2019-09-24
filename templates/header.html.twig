@@ -1,0 +1,62 @@
+<div id="header_bar">
+
+    <div id="LHS_logo">
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 502.58 372.74" id="upper_left_logo">
+                <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                        <circle class="cls-1" cx="186.37" cy="186.37" r="166.37"/>
+                        <circle class="cls-1" cx="417.66" cy="186.37" r="64.92"/>
+                        <path class="cls-2" d="M417.66,251.29a64.92,64.92,0,1,0-64.92-64.92A166.36,166.36,0,0,1,186.37,352.74"/>
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </div>
+
+    <div class="burger_icon" onclick="toggleBurgerIcon()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- active_page class added to relevant page -->
+    <nav class="main_nav_bar">
+        <div class="main_nav_style">
+            <ul class="uppercase">
+                <li class={% if activePage == "home" %} 'active_page' {% endif %}>
+                    <a href="/" class="nav_text ">Home</a>
+                </li>
+                <li class={% if activePage == "about" %} 'active_page' {% endif %}>
+                    <a href="/about" class="nav_text ">About</a>
+                </li>
+                <li class={% if activePage == "gallery" %} 'active_page' {% endif %}>
+                    <a href="/gallery" class="nav_text ">Portfolio</a>
+                </li>
+                <li class={% if activePage == "contact" %} 'active_page' {% endif %}>
+                    <a href="/contact" class="nav_text ">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<!-- this can be moved to a javascript file -->
+<script type="text/javascript">
+
+    const toggleBurgerIcon = () => {
+
+
+
+        const burgerIcon = document.getElementsByClassName('burger_icon')[0]
+        const navBar = document.getElementsByClassName('main_nav_bar')[0]
+
+        burgerIcon.classList.toggle('change')
+
+        window.innerWidth < 740 ? navBar.classList.toggle('phoneNavMenu') : navBar.classList.toggle('phoneNavMenuClicked')
+
+
+
+    }
+</script>

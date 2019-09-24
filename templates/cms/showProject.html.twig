@@ -1,0 +1,43 @@
+{% extends "cms/adminBase.html.twig" %}
+
+{% block title %}
+    Admin Entry | Jamie Pask
+{% endblock %}
+
+{% block stylesheets %}
+
+    {# <link href="{{ asset('css/homepage/landing.css') }}" rel="stylesheet"/> #}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="actions">
+        <a class="action" onclick="ajaxUpdateCall({{project['id']}})">Edit Project</a>
+    </div>
+
+
+    <table class="no-background">
+        <tr>
+            <td>Sector</td>
+            <td>{{ project['sector'] }}</td>
+        </tr>
+        <tr>
+            <td>Position</td>
+            <td>{{ project['position'] }}</td>
+        </tr>
+        <tr>
+            <td>Visible</td>
+            <td>{{ project['visible'] }}</td>
+        </tr>
+        <tr>
+            <td>Summary</td>
+            <td>{{ project['summary'] }}</td>
+        </tr>
+    </table>
+
+
+{% endblock %}
+{% block javascripts %}
+    <script src="/javascript/admin.js"></script>
+{% endblock javascripts %}

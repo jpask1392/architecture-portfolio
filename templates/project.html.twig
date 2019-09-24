@@ -1,0 +1,79 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Home | Jamie Pask
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('css/common.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/galleryPage/gallery.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/projectPage/project.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/projectPage/photoswipe/photoswipe.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('css/projectPage/photoswipe/default-skin.css') }}" rel="stylesheet" type="text/css">
+    
+    <script src="/javascript/photoswipe/photoswipe.min.js"></script>
+    <script src="/javascript/photoswipe/photoswipe-ui-default.min.js"></script>
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="gallery-container">
+
+        <div class="portfolio_title_bar">
+
+            <div id="portfolio_main_title">
+
+                <div>Portfolio of
+                    <b style="color: gold">work.</b>
+                </div>
+
+                <div class="sub_nav_bar_2">
+                    <a class="sub_nav_link" href="/">HOME</a>&nbsp;<span class="arrow-right"></span>&nbsp;
+                    <a class="sub_nav_link" href='/gallery'>PORTFOLIO</a>&nbsp;<span class="arrow-right"></span>&nbsp;
+                    <b>{{ projectData['project_name'] }}</b>
+                </div>
+            </div>
+
+            <p id="portfolio_main_sub_text">
+                This collection of projects is an assortment of work created within the past two years. 
+                Feel free to get in touch if you have any comments.
+            </p>
+        </div>
+
+
+        {{ 
+            include('/project/_featureImage.html.twig', {
+                projectData: projectData,
+                featureImages: featureImages
+            }) 
+        }}
+
+        {% for section in sectionData %}
+            
+            {{
+                include('/project/_projectSection.html.twig', {
+                    section: section,
+                    slides: slideImages,
+                    index: loop.index
+                })
+            }}
+
+        {% endfor %}
+
+        {{
+            include('/project/_fullGallery.html.twig', {
+                projectImages: projectImages,
+                allImages: projectImages
+            }) 
+        }}
+
+    </div>
+
+
+{% endblock %}
+{% block javascripts %}
+    <script src="/javascript/project.js"></script>
+    <script src="/javascript/projectSlideshow.js"></script>
+{% endblock javascripts %}

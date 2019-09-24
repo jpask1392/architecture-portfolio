@@ -4,26 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
-            {% block title %}Welcome!
+            {% block title %}
+                Admin
             {% endblock %}
         </title>
         <link rel="icon" type="image/png" href="IMAGES/Symbols/32x32.png">
-
         <link href="{{ asset('css/common.css') }}" rel="stylesheet"/>
-        <link href="{{ asset('css/headerBar.css') }}" rel="stylesheet"/>
-
+        <link href="{{ asset('css/adminPages/adminEntry.css') }}" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/639f6605e8.js"></script>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
 
-        {{ include('header.html.twig', { activePage: activePage }) }}
+        {{ include('cms/_sideNav.html.twig') }}
 
-        <div id="fullpage"> {% block body %}{% endblock %}
-
+        <div id="content-container">
+            <h1 id="content-header">PROJECTS</h1>
+            <div id="content"> 
+        
+            {% block body %}{% endblock %}
+                
+            </div>
         </div>
 
-        <script src="/javascript/common.js"></script>
         {% block javascripts %}{% endblock %}
 
     </body>

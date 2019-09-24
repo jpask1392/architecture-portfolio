@@ -1,0 +1,17 @@
+<div class="grid-item {{ project['sector'] }}">
+    <a href="gallery/project/{{ project['id'] }}">
+        <div class="gallery_hover">
+            <p class="gallery_title">
+                {{ project['project_name'] }}<br/><br/>
+            </p>
+        </div>
+    </a>
+    {% set break = false %}
+    {% for image in featureImages if not break %}
+        {% if image['project_key'] == project['id'] %}
+            <img class="thumbnail_gallery" src="assets/projects/{{ image['imagePath'] ~ image['fileType'] }}" style="height:100%;"/>   
+            {% set break = true %} 
+        {% endif %}
+    {% endfor %}
+    
+</div>

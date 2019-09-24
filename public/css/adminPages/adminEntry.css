@@ -1,0 +1,146 @@
+html {
+	height: 100%;
+	min-width: 900px;
+	min-height: 800px;
+	position: relative;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #eaeaea;
+	height: 100%;
+	font-family: helvetica;
+}
+
+hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#form-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#content-container {
+	margin-left: 225px;
+	margin-right: 25px;
+}
+
+#content-header {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+#content {
+	padding: 25px;
+	background: white;
+}
+
+#site-link {
+	margin: auto;
+	width: 100px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.back-button {
+	padding-bottom: 20px;
+}
+
+/*TABLE STYLING*/
+
+.list {
+	margin-top: 50px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+tr {
+	text-align: left;
+	vertical-align: top;
+}
+
+th {
+	padding: 10px;
+}
+
+dd {
+	margin: 0;
+}
+
+td {
+	border: none;
+	/*margin:0;*/
+	padding: 10px;
+	margin-right: 20px;
+}
+
+tr:nth-child(2n) {
+	background: #eaeaea;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*LOGIN FORM STYLING*/
+
+#login-form {
+	width: 250px;
+	height: 350px;
+	background: white;
+	margin: auto;
+	padding: 30px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+/*SIDEBAR STYLING*/
+
+#side-bar {
+	height: 100%;
+	width: 200px;
+	background: black;
+	float: left;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+}
+
+#side-bar ul {
+	margin-top: 100px;
+	padding: 0;
+}
+
+#side-bar a {
+	list-style-type: none;
+	text-decoration: none;
+	color: white;
+}
+
+#side-bar li {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-top: white 0.5px solid;
+}
+
+#side-bar li:hover {
+	background: grey;
+}
+#side-bar li:active {
+	background: grey;
+}
+
+.logout-button {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+}

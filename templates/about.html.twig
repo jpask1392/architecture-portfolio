@@ -1,0 +1,84 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    About | Jamie Pask
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('css/aboutPage/aboutpage.css') }}" rel="stylesheet"/>
+    <link href="javascript/fullPage.js-master/javascript.fullPage.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="portfolio_main_title">
+        <div style="font-size: 3em!important">About
+            <b style="color: gold">me.</b>
+        </div>
+
+        <div style="font-size: 0.8em!important; font-weight: 100">
+            <a class="sub_nav_link" href="../Index.html">HOME</a>&nbsp;<span class="arrow-right"></span>&nbsp;<b>ABOUT ME</b>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <div class="fp-controlArrow fp-prev " style="left:8.3333%;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 161.94 159.97">
+                <defs>
+                    <style>
+                        .arrow-1-black {
+                            fill: none;
+                            stroke: black;
+                            stroke-miterlimit: 10;
+                            stroke-width: 10px;
+                        }
+                    </style>
+                </defs>
+                <title>Down Arrow Simple</title>
+                <g data-name="Layer 2">
+                    <g data-name="Layer 6">
+                        <polyline class="arrow-1-black" points="158.52 80.31 80.92 153.11 3.42 80.31"/>
+                        <line class="arrow-1-black" x1="80.92" y1="153.11" x2="80.92"/></g>
+                </g>
+            </svg>
+        </div>
+        
+        <div class="fp-controlArrow fp-next " style="right:8.3333%;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 161.94 159.97">
+                <defs>
+                    <style>
+                        .arrow-1-black {
+                            fill: none;
+                            stroke: black;
+                            stroke-miterlimit: 10;
+                            stroke-width: 10px;
+                        }
+                    </style>
+                </defs>
+                <title>Down Arrow Simple</title>
+                <g data-name="Layer 2">
+                    <g data-name="Layer 6">
+                        <polyline class="arrow-1-black" points="158.52 80.31 80.92 153.11 3.42 80.31"/>
+                        <line class="arrow-1-black" x1="80.92" y1="153.11" x2="80.92"/></g>
+                </g>
+            </svg>
+        </div>
+
+        {{ include('about/_whoAmI.html.twig') }}
+        {{ include('about/_whatMakesMeDiff.html.twig') }}
+        {{ include('about/_education.html.twig') }}
+        {{ include('about/_professional.html.twig') }}
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="javascript/fullPage.js-master/javascript.fullPage.js"></script>
+    <script src="javascript/about.js"></script>
+
+{% endblock javascripts %}

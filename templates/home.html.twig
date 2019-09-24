@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Home | Jamie Pask
+{% endblock %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('css/homepage/landing.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/homepage/about.css') }}" rel="stylesheet"/>
+    <link href="javascript/fullpagejs/javascript.fullPage.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block body %}
+
+    {{ include('home/_landing.html.twig') }}
+
+    {{ include('home/_about.html.twig') }}
+
+    {{ include('home/_portfolio.html.twig') }}
+
+    {{ include('home/_contact.html.twig') }}
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="javascript/fullpagejs/javascript.fullPage.js"></script>
+    <script src="javascript/home.js"></script>
+
+{% endblock javascripts %}

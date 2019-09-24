@@ -1,0 +1,65 @@
+{% extends "cms/adminBase.html.twig" %}
+
+{% block title %}
+    Jamie Pask | Admin Projects
+{% endblock %}
+
+{% block stylesheets %}
+
+    {# <link href="{{ asset('css/homepage/landing.css') }}" rel="stylesheet"/> #}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="actions">
+        <a class="action" href="">Create New Project</a>
+    </div>
+
+    <!-- STYLING TO TABLE HIT AND MISS COLOURS  -->
+    <table class="list">
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Sector</th>
+            <th>Project Size</th>
+            <th>Summary</th>
+            <th>Position</th>
+            <th>Visible</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+
+        {% for project in projects %}
+
+            <tr>
+                <td>{{ project['id'] }}</td>
+                <td>{{ project['project_name'] }}</td>
+                <td>{{ project['sector'] }}</td>
+                <td>{{ project['project_size'] }}</td>
+                <td>{{ project['summary'] }}</td>
+                <td>{{ project['position'] }}</td>
+                <td>{{ project['visible'] }}</td>
+
+                <td>
+                    <a href="/admin/project/{{ project['id'] }}">View Page</a>
+                </td>
+
+                <td>
+                    <a class="action" href="/admin/edit?={{ project['id'] }}">Edit</a>
+                </td>
+                <td>
+                    <a class="action" href="">Delete</a>
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+
+    </table>
+
+{% endblock %}
+{% block javascripts %}{% endblock javascripts %}

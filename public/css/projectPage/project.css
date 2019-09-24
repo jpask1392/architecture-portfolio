@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+#header_bar {
+	background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+#grey_background {
+	height: auto;
+	width: 120%;
+	left: -10%;
+	top: 20%;
+	bottom: 0;
+	position: absolute;
+	z-index: -1;
+	background-color: rgba(239, 239, 239, 1);
+	display: inline-block;
+}
+
+#project_description_container {
+	width: 100%;
+	height: auto;
+	margin: 5% auto 5% auto;
+	display: inline-block;
+	font-size: 1.25em;
+	/*	line-height: 150px!important*/
+}
+
+#project_description_01 {
+	width: 20%;
+	float: left;
+	font-weight: bolder;
+	margin-right: 5%;
+	line-height: 30px !important;
+}
+
+#project_description_02 {
+	width: 65%;
+	float: left;
+	font-weight: normal;
+	/*	margin-right:5%;*/
+	line-height: 30px !important;
+}
+
+#project_description_03 {
+	width: 20%;
+	float: left;
+	font-weight: normal;
+	margin-right: 5%;
+	line-height: 30px !important;
+}
+
+.individual_project_down_arrow {
+	width: 40px;
+	float: left;
+	margin-top: 20%;
+}
+
+.section_container {
+	height: 85vh;
+	width: 100%;
+	position: relative;
+	top: 15%;
+	margin-top: 5%;
+
+}
+
+.secton_left {
+	height: 100%;
+	width: 83.6666%;
+	position: relative;
+	left: 8.3333%;
+}
+
+.text_container {
+	width: 25%;
+	font-weight: normal;
+	line-height: 20px;
+	position: relative;
+	display: inline-block;
+	margin-top: 50px;
+}
+
+.slideshow_container {
+	width: 66.6666%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	transition: 0.6s ease;
+}
+
+
+.section_headings {
+	text-align: left;
+	width: 25%;
+	display: inline-block;
+	font-weight: bolder;
+	left: 0;
+	/* float: left; */
+	/* margin-top: 5%; */
+}
+
+/* .section_headings_right {
+	font-size: 2em;
+	text-align: left !important;
+	width: 25%;
+	font-weight: bolder;
+	float: left;
+	margin-top: 5%;
+	margin-left: 75%;
+} */
+
+.individual_image {
+	max-height: 100%;
+	max-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	/*  border-radius: 0 3px 3px 0;*/
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+	color: white;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	-webkit-transition: opacity 0.5s; /* Safari */
+	transition: opacity 0.5s;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: black;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 8px;
+	text-align: center;
+	width: 100%;
+	z-index: 3;
+}
+
+.mySlides0:hover > .text {
+	opacity: 1 !important;
+}
+
+.mySlides:hover > .text {
+	opacity: 1 !important;
+}
+
+.mySlides {
+	display: none;
+}
+
+/*
+.slideshow_conatiner_right:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+*/
+
+.mySlides2:hover > .text {
+	opacity: 1 !important;
+}
+
+.mySlides3:hover > .text {
+	opacity: 1 !important;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.all_images {
+	/*
+	width:22%;
+	padding-bottom: 22%;
+	height:0px;
+*/
+	width: calc(13.75vw - 13.3333px);
+	height: calc(13.75vw - 13.3333px);
+	overflow: hidden;
+	float: left;
+	/*	margin:0;*/
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 0 !important;
+	margin-top: 0 !important;
+	filter: grayscale(1);
+	-webkit-transition: filter 0.25s; /* Safari */
+	transition: filter 0.25s;
+}
+
+.all_images:hover {
+	filter: grayscale(0);
+}
+
+.all_images_container {
+	margin-top: 50px;
+	/* width: 66.6666%;
+	height: auto;
+	margin: 0;
+	padding: 0 0 10% 0;
+	position: absolute;
+	left: 0; */
+	/*	background-color: red;*/
+}
+
+.all_gallery::after {
+	content: "Click any image to view all images within this gallery. If you have any comments or questions about any of these images please feel free to contact me via email: jamiepask1392@gmail.com.";
+}
+
+[itemprop="thumbnail"] {
+	left: 50%;
+	transform: translate(-50%, 0%);
+	position: relative;
+}
+

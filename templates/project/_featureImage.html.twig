@@ -1,0 +1,31 @@
+<div id="rendered_image_container">
+
+    <div id="grey_background"></div>
+
+    <div style="width:100%" class="slideshow_container" id="container_0"}>
+
+        {% for image in featureImages %}
+            <div
+                class="mySlides fade">
+                <img class="individual_image_main" style="width:100%;" src="/assets/projects/{{image['imagePath'] ~ image['fileType']}}">
+            </div>    
+        {% endfor %}
+
+        <a class="prev" onclick="prevSlide(this)">&#10094;</a>
+        <a class="next" onclick="nextSlide(this)">&#10095;</a>
+    </div>
+
+    <div id="project_description_container">
+
+        <h2 id="project_description_01">
+            <b style="font-size: 1.5em">{{ projectData['project_name']}}</b>
+            <p>Approx {{ projectData['project_size']}}m&#178;</p>
+        </h2>
+
+        <h2 id="project_description_02">
+            {{ projectData['summary'] }}
+        </h2>
+
+    </div>
+
+</div>
